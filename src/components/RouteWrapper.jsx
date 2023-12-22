@@ -11,7 +11,7 @@ const RouteWrapper = () => {
     const RouteLocation = useLocation()
   return (
     <Routes location={RouteLocation} key={RouteLocation.pathname}>
-          <Route path='/' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
           <Route path='/education' element={<Edu />} />
           <Route path='/about' element={<About />} />
           <Route path='/experience' element={<Experience />} />

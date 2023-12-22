@@ -48,7 +48,7 @@ const Contact = () => {
                 
                 <motion.div 
                 onClick={()=>{
-                  const toEmail = 'chrajabali810@gmail.com';
+                  const toEmail = encodeURIComponent('chrajabali810@gmail.com');
                   const gmailUrl = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${toEmail}`;
                  window.open(gmailUrl,'_blank')
                }}

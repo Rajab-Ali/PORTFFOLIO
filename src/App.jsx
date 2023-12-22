@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route, useLocation} from 'react-router-dom'
 import Layout from './appLayout/Layout'
 import LocationWrapper from './components/LocationWrapper'
 import RouteWrapper from './components/RouteWrapper'
@@ -21,7 +21,7 @@ function App() {
   },[isHeaderAnimate])
   return (
     <>
-      <BrowserRouter>
+      <Router>
       <Header setIsHeaderAnimate={setIsHeaderAnimate} />
      {
      isHeaderAnimate && <Layout >
@@ -34,7 +34,7 @@ function App() {
     {
      isBodyAnimate && <Footer />
     }   
-      </BrowserRouter>
+      </Router>
     </>
   )
 }
