@@ -33,23 +33,29 @@ const Contact = () => {
                 <div>
                     <h2 className='font-bold text-[#002057] text-[22px]'>Social Profiles</h2>
                     <div className='mt-4 mx-auto flex gap-6 items-center '>
-                <Link to={'http://www.linkedin.com/in/ch-rajab-ali'}  >
+                <Link target='_blank' to={'http://www.linkedin.com/in/ch-rajab-ali'}  >
                 <motion.div whileHover={{scale:1.25}} whileTap={{scale:0.9}}  className='p-3 rounded-full text-center bg-[#002057] hover:bg-blue-500 cursor-pointer'>
                  <FaLinkedinIn  className='text-white' />
                 </motion.div>
                 </Link>
 
-                <Link  to={'https://github.com/Rajab-Ali'} >
+                <Link target='_blank'  to={'https://github.com/Rajab-Ali'} >
                   <motion.div whileHover={{scale:1.25}} whileTap={{scale:0.9}}  className='p-3 rounded-full text-center bg-[#002057] hover:bg-blue-500 cursor-pointer'>
                     <FaGithub  className='text-white' />
                   </motion.div>
                 </Link>    
             
-                <Link to={''} >
-                <motion.div whileHover={{scale:1.25}} whileTap={{scale:0.9}}  className='p-3 rounded-full text-center bg-[#002057] hover:bg-blue-500 cursor-pointer'>
+                
+                <motion.div 
+                onClick={()=>{
+                  const toEmail = 'chrajabali810@gmail.com';
+                  const gmailUrl = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${toEmail}`;
+                 window.open(gmailUrl,'_blank')
+               }}
+                whileHover={{scale:1.25}} whileTap={{scale:0.9}}  className='p-3 rounded-full text-center bg-[#002057] hover:bg-blue-500 cursor-pointer'>
                 <FaGoogle  className='text-white' />
                 </motion.div>
-                </Link> 
+                
                 </div>
                 </div>
             </div>
