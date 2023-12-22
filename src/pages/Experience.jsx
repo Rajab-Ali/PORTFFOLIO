@@ -12,8 +12,8 @@ const Experience = () => {
 
       <div className="w-[80%] mx-auto">
         <h1 className="text-[#002057] font-bold leading-loose text-[34px] text-center pb-10">
-          About Me
-        </h1>
+          My Experience
+        </h1> 
 
 {/* timeline main div */}
         <motion.div  >
