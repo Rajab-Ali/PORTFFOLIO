@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const Menu = ({setIsHeaderAnimate}) => {
@@ -12,6 +12,15 @@ const Menu = ({setIsHeaderAnimate}) => {
         { id: 7, name: "Contact", url: '/contact'},
     ])
     const [showMenu, setShowMenu] = useState(1)
+    const RouteLocation = useLocation()
+    useEffect(()=>{
+        data.map(i=>{
+            if(i.url==RouteLocation.pathname){
+                console.log(i.url,"---" ,RouteLocation.pathname);
+                setShowMenu(i.id)
+            }
+        })
+    },[])
 
     return (
     <motion.ul initial={{x:-100, opacity:0}} animate={{x:0, opacity:1}} onAnimationComplete={()=>{

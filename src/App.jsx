@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import {HashRouter as Router, Routes, Route, useLocation} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom'
 import Layout from './appLayout/Layout'
 import LocationWrapper from './components/LocationWrapper'
 import RouteWrapper from './components/RouteWrapper'
